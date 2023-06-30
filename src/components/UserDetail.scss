@@ -1,0 +1,59 @@
+@import "../variables.scss";
+
+$font-size-user-id: 18px;
+$font-weight-user-id: bold;
+
+$font-size-tile-title: 12px;
+$font-size-tile-value: 18px;
+$font-weight-tile-value: bold;
+
+$color-tile-background: #f6f9fb;
+$color-tile: #b2b7b9;
+
+.user-detail-container {
+  padding: $spacing-4;
+  flex: 3;
+}
+
+.user-detail-header {
+  padding: $spacing-2;
+
+  .title {
+    font-size: $font-size-user-id;
+    font-weight: $font-weight-user-id;
+  }
+}
+
+.user-detail-tile {
+  padding: $spacing-1 $spacing-3;
+  flex: 1;
+  background-color: $color-tile-background;
+  .title {
+    color: $color-tile;
+    font-size: $font-size-tile-title;
+  }
+
+  .value {
+    font-size: $font-size-tile-value;
+    font-weight: $font-weight-tile-value;
+    margin: $spacing-2 0;
+  }
+}
+
+.user-detail-section {
+  margin-bottom: $spacing-4;
+}
+
+.user-detail-attributes {
+  border-collapse: separate;
+
+  td,
+  th {
+    padding: $spacing-3;
+    border-bottom: 1px solid $color-table-border;
+  }
+
+  th {
+    color: $color-table-header;
+  }
+}

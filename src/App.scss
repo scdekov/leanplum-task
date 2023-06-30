@@ -1,9 +1,11 @@
-html, body {
+@import "./variables.scss";
+
+html,
+body {
   margin: 0;
   padding: 0;
   font-family: Helvetica, Arial, sans-serif;
   font-size: 14px;
-  background-color: #f6f9fb;
 }
 
 #app {
@@ -34,56 +36,87 @@ html, body {
 }
 
 #nav a.router-link-active {
-  background-color: rgba(0, 0, 0, .1);
+  background-color: rgba(0, 0, 0, 0.1);
 }
 
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 32px;
 
-    h2 {
-        font-size: 24px;
-    }
+  h2 {
+    font-size: 24px;
+  }
 }
 
 .content {
-    background-color: #fff;
-    box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
-    border-radius: 4px;
-    margin: 32px;
-    padding: 32px;
+  background-color: #fff;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  margin: 32px;
+  padding: 32px;
 }
 
 .btn {
-    border-radius: 4px;
-    border-style: none;
-    padding: 6px 16px;
-    height: 36px;
-    font-size: 14px;
-    font-weight: bold;
-    outline: none;
-    cursor: pointer;
-    transition: box-shadow .1s linear;
+  border-radius: 4px;
+  border-style: none;
+  padding: 6px 16px;
+  height: 36px;
+  font-size: 14px;
+  font-weight: bold;
+  outline: none;
+  cursor: pointer;
+  transition: box-shadow 0.1s linear;
 
-    color: #1076fb;
-    background-color: #e7f1ff;
+  color: #1076fb;
+  background-color: #e7f1ff;
 
-    &.primary {
-        background-color: #1076fb;
-        color: #fff;
-    }
+  &.primary {
+    background-color: #1076fb;
+    color: #fff;
+  }
 
-    &:hover,
-    &:focus {
-        box-shadow: 0 4px 10px 0 rgba(16, 118, 251, 0.5);
-    }
+  &:hover,
+  &:focus {
+    box-shadow: 0 4px 10px 0 rgba(16, 118, 251, 0.5);
+  }
 }
 
 .author {
-    color: #b2b7b9;
-    font-size: 12px;
-    padding: 4px 0;
+  color: #b2b7b9;
+  font-size: 12px;
+  padding: 4px 0;
 }
 
+.text-left {
+  text-align: left;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-space-between {
+  justify-content: space-between;
+}
+
+.flex-gap-2 {
+  gap: $spacing-2;
+}
+
+.title {
+  font-size: $font-size-title;
+  margin-bottom: $spacing-1;
+}
+
+.subtitle {
+  font-size: $font-size-subtitle;
+  color: $color-subtitle;
+}
